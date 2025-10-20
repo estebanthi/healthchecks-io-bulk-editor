@@ -53,3 +53,15 @@ Commands:
 hc-bulk ls --tags backup,docker
 hc-bulk bulk-update --name-re "docker-system" --set-grace 3600 --set-schedule "30 3 * * 0"
 ```
+
+## 🐳 Docker
+
+A Docker image is available on Docker Hub: `estebanthi/hc-bulk`.
+
+```bash
+docker run --rm \
+    -e HC_API_KEY="your_api_key_here" \
+    -e HC_API_URL="https://hc.example.com/api" \
+    estebanthi/hc-bulk:latest  \
+    ls --tags your_tag_here
+```
