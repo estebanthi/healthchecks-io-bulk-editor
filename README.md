@@ -46,3 +46,10 @@ Commands:
   bulk-update  Bulk edit checks: select by filters, then apply updates...
   ls           List checks after applying filters.
 ```
+
+### Examples
+
+```bash
+hc-bulk ls --tags backup,docker
+hc-bulk bulk-update --name-re "docker-system" --set-grace 3600 --set-schedule "30 3 * * 0"
+```
