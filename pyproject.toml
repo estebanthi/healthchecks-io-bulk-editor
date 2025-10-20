@@ -1,0 +1,28 @@
+[project]
+name = "healthchecks-io-bulk-editor"
+version = "0.1.0"
+description = "Bulk-edit Healthchecks.io checks from the CLI"
+authors = [{ name = "estebanthi", email = "esteban.thilliez@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+  "healthchecks-io @ git+https://gitea.wavyzz.com/Wavyzz/py-healthchecks.io-fork.git@main",
+  "python-dotenv>=1.0.1,<2.0.0",
+  "click>=8.3.0,<9.0.0",
+  "loguru>=0.7.3,<0.8.0",
+  "tqdm>=4.67.1,<5.0.0",
+]
+
+[project.scripts]
+hc-bulk = "hc_bulk.cli:cli"
+
+[tool.poetry]
+packages = [{ include = "hc_bulk" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://gitea.wavyzz.com/Wavyzz/healthchecks-io-bulk-editor"
+Issues   = "https://gitea.wavyzz.com/Wavyzz/healthchecks-io-bulk-editor/issues"
